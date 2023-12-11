@@ -19,6 +19,15 @@ app.get('/', (req, res) => {
     res.render('index');
 })
 
+// restaurant Info
+app.get('/restaurants/:restaurant_id', (req, res) => {
+    let restaurantsID = req.params.restaurant_id
+    console.log(restaurantsID)
+    let restaurantOne = restaurantList.results.filter(item => Number(item.id) === Number(restaurantsID))
+    console.log(restaurantOne)
+    res.render('show', { restaurant: restaurantOne[0] });
+})
+
 // 三、監聽設定(是否連結)
 // start and listen on the Express server
 app.listen(port, () => {
