@@ -1,5 +1,8 @@
 # 我的餐廳清單(My Restaurant List)
 
+![Screenshot of this project index.](https://i.imgur.com/gHn1BGY.png)
+![Screenshot of this project show.](https://i.imgur.com/NwqZopW.png)
+
 ## 介紹
 紀錄屬於自己的餐廳清單，可以瀏覽餐廳、查看詳細資訊、甚至連結到地圖。
 
