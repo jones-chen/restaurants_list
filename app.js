@@ -26,6 +26,15 @@ app.get('/restaurants/:restaurant_id', (req, res) => {
     res.render('show', { restaurant: restaurantOne[0] });
 })
 
+// restaurant Search Result
+app.get('/search', (req, res) => {
+    let keyword = req.query.keyword     //取得網址的 search=?keyword=...
+    const newRestaurantList = restaurantList.results.filter(restaurant => {
+        return (restaurant.name.toLowerCase().includes(keyword.toLowerCase()))
+    })
+    res.render('index', { restaurants: newRestaurantList, keyword: keyword});
+})
+
 // 三、監聽設定(是否連結)
 // start and listen on the Express server
 app.listen(port, () => {
