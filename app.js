@@ -16,15 +16,13 @@ app.use(express.static('public'))  //先走 public 這個資料夾，看有沒�
 // 二、路由設定(routes setting)
 // index
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', { restaurants: restaurantList.results});
 })
 
 // restaurant Info
 app.get('/restaurants/:restaurant_id', (req, res) => {
     let restaurantsID = req.params.restaurant_id
-    console.log(restaurantsID)
     let restaurantOne = restaurantList.results.filter(item => Number(item.id) === Number(restaurantsID))
-    console.log(restaurantOne)
     res.render('show', { restaurant: restaurantOne[0] });
 })
 
