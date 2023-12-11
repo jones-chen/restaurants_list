@@ -26,4 +26,3 @@ ctrl + c
 - Express 4.17.1
 - Express-Handlebars 5.3.3
 - Bootstrap 5.2.1
-- Font-awesome 5.8.1
