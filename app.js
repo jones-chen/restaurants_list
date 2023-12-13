@@ -1,11 +1,12 @@
 // 一、基本參數
 // 導入套件
 const express = require('express')
+const exphbs = require('express-handlebars')
 const app = express()
 const port = 3000
 
 // 導入 handlebars, 線下檔案資料
-const exphbs = require('express-handlebars')
+
 const restaurantList = require('./restaurant.json')
 
 // 設定佈局、導入套件位置
